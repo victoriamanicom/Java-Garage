@@ -24,13 +24,15 @@ public class App {
 //		System.out.println(garage.fixVehicle(car1));
 //		System.out.println("Bus 1: " + garage.fixVehicle(bus1));
 //		System.out.println("Bus 2: " + garage.fixVehicle(bus2));
-		System.out.println(garage.fixVehicle(motorbike1));
-		System.out.println(garage.fixVehicle(motorbike2));
+//		System.out.println(garage.fixVehicle(motorbike1));
+//		System.out.println(garage.fixVehicle(motorbike2));
 
 //		garage.removeVehicleByType("Car");
 //
 //		System.out.println(garage);
 
+		garage.emptyGarage();
+		System.out.println(garage);
 	}
 
 }

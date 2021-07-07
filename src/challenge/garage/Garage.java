@@ -65,8 +65,11 @@ public class Garage {
 	}
 
 	public void emptyGarage() {
-		for (Vehicle vehicle : listOfVehicles)
-			removeVehicle(vehicle);
+		ArrayList<Vehicle> vehiclesToBeRemoved = new ArrayList<>();
+		for (Vehicle vehicle : listOfVehicles) {
+			vehiclesToBeRemoved.add(vehicle);
+		}
+		listOfVehicles.removeAll(vehiclesToBeRemoved);
 
 	}
 
