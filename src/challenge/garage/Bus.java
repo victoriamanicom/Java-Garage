@@ -17,4 +17,9 @@ public class Bus extends Vehicle {
 		this.busUsage = busUsage;
 	}
 
+	@Override
+	public String toString() {
+		return "\n Bus [" + getColour() + " " + getModel() + " with capacity " + getSeatingCapacity()
+				+ " people. Usage: " + busUsage + ". Fuel Type: " + getFuelType() + "]";
+	}
 }

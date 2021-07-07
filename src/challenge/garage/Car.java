@@ -29,4 +29,10 @@ public class Car extends Vehicle {
 		this.style = style;
 	}
 
+	@Override
+	public String toString() {
+		return "\n Car [" + noOfDoors + "-door " + getColour() + " " + getModel() + " " + style + " with capacity "
+				+ getSeatingCapacity() + " people. Fuel Type: " + getFuelType() + "]";
+	}
+
 }

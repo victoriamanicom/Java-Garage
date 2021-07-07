@@ -13,14 +13,6 @@ public class Garage {
 		listOfVehicles.remove(vehicle);
 	}
 
-//	public void removeVehicleByType(Class<?> classType) {
-//		for (Vehicle vehicle : listOfVehicles) {
-//			if (vehicle instanceof classType) {
-//				removeVehicle(vehicle);
-//			}
-//		}
-//	}
-
 	public void removeVehicleByType(String type) {
 		ArrayList<Vehicle> vehiclesToBeRemoved = new ArrayList<>();
 		for (Vehicle vehicle : listOfVehicles) {
@@ -32,7 +24,7 @@ public class Garage {
 
 	}
 
-	public int fixVehicle(Vehicle vehicle) {
+	public String fixVehicle(Vehicle vehicle) {
 		int bill = 0;
 		if (vehicle.getClass().getSimpleName().equals("Car")) {
 			bill = (vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 100;
@@ -52,7 +44,7 @@ public class Garage {
 		} else {
 			System.out.println("There are no vehicles to fix.");
 		}
-		return bill;
+		return "Total bill to fix " + vehicle + " is: £" + bill;
 	}
 
 	public int applyElectricDiscount(int bill) {
@@ -72,7 +64,7 @@ public class Garage {
 
 	@Override
 	public String toString() {
-		return "Garage [Vehicles in Garage:" + listOfVehicles + "\n]";
+		return "Vehicles in Garage:" + listOfVehicles;
 	}
 
 }
