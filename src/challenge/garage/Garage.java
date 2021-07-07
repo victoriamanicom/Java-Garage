@@ -35,22 +35,19 @@ public class Garage {
 	public int fixVehicle(Vehicle vehicle) {
 		int bill = 0;
 		if (vehicle.getClass().getSimpleName().equals("Car")) {
+			bill = (vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 100;
 			if (vehicle.getFuelType().equals("Electric")) {
-				bill = applyElectricDiscount((vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 100);
-			} else {
-				bill = (vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 100;
+				bill = applyElectricDiscount(bill);
 			}
 		} else if (vehicle.getClass().getSimpleName().equals("Motorbike")) {
+			bill = (vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 300;
 			if (vehicle.getFuelType().equals("Electric")) {
-				bill = applyElectricDiscount((vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 300);
-			} else {
-				bill = (vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 300;
+				bill = applyElectricDiscount(bill);
 			}
 		} else if (vehicle.getClass().getSimpleName().equals("Bus")) {
+			bill = (vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 15;
 			if (vehicle.getFuelType().equals("Electric")) {
-				bill = applyElectricDiscount((vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 15);
-			} else {
-				bill = (vehicle.getSeatingCapacity() * vehicle.getNoOfWheels()) * 15;
+				bill = applyElectricDiscount(bill);
 			}
 		} else {
 			System.out.println("There are no vehicles to fix.");
